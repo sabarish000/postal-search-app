@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5em;
+    padding: 5px;
+    .submit-button {
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        padding: 5px;
+    }
+}

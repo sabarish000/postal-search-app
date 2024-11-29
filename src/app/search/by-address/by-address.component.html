@@ -1,0 +1,25 @@
+<mat-card appearance="outlined">
+    <mat-card-header>
+        <mat-card-title>Search postal code by address</mat-card-title>
+    </mat-card-header>
+    <mat-card-actions>
+        <div class="inputs-form">
+            <form [formGroup]="searchForm" (ngSubmit)="submit()">
+                <div class="inputs">
+                    <!--Select a city-->
+                    <my-searchable-dropdown [label]="'City'" [options]=cities formControlName="city"
+                        (onInputChange)="getCities($event)"></my-searchable-dropdown>
+                    <!--Select an area-->
+                    <my-filterable-dropdown [label]="'Choose an area'" [options]="(cityAreas$ | async) ?? []" formControlName="area">
+                    </my-filterable-dropdown>
+                </div>
+                <div class="submit-button">
+                    <button mat-flat-button [disabled]="searchForm.invalid">Search</button>
+                </div>
+            </form>
+        </div>
+    </mat-card-actions>
+</mat-card>
+<ng-container *ngIf="data.length>0">
+    <app-table [rows]="data" [cols]="colsMetaData"></app-table>
+</ng-container>

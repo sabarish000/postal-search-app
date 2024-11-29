@@ -1,0 +1,23 @@
+<mat-card style="padding: 10px;">
+    <mat-card-title>Postal code search</mat-card-title>
+    <mat-card-content>
+        
+        <mat-tab-group>
+          <mat-tab>
+            <ng-template mat-tab-label>
+              <mat-icon class="example-tab-icon">contact_mail</mat-icon>
+              By address
+            </ng-template>
+            <app-by-address></app-by-address>
+          </mat-tab>
+        
+          <mat-tab>
+            <ng-template mat-tab-label>
+              <mat-icon class="example-tab-icon">pin</mat-icon>
+              By postal code
+            </ng-template>
+            <app-by-postal-code></app-by-postal-code>
+          </mat-tab>
+        </mat-tab-group>
+    </mat-card-content>
+</mat-card>

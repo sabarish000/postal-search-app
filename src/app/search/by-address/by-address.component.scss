@@ -1,0 +1,20 @@
+.inputs-form {
+    width: 100%;
+    padding: 0 10px;
+    .inputs {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        my-searchable-dropdown {
+            min-width: 45%;
+        };
+        my-filterable-dropdown {
+            min-width: 45%;
+        }
+    }
+    .submit-button {
+        display: flex;
+        justify-content: end;
+    }
+}

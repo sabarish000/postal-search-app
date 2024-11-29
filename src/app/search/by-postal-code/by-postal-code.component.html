@@ -1,0 +1,22 @@
+<mat-card appearance="outlined">
+    <mat-card-header>
+        <mat-card-title>Search address by postal code</mat-card-title>
+        <!-- <mat-card-subtitle>Herding group</mat-card-subtitle> -->
+    </mat-card-header>
+    <mat-card-actions>
+        <div class="inputs-form">
+            <form>
+                <mat-form-field appearance="fill">
+                    <mat-label>Enter a post code</mat-label>
+                    <input matInput placeholder="Enter a post code"aria-label="Number"
+                    matInput
+                    [formControl]="postcodeCtrl">
+                    <mat-icon matSuffix>pin</mat-icon>
+                  </mat-form-field>
+            </form>
+        </div>
+    </mat-card-actions>
+</mat-card>
+<ng-container *ngIf="data.length>0">
+    <app-table [rows]="data" [cols]="colsMetaData"></app-table>
+</ng-container>

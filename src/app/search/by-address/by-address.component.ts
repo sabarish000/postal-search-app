@@ -1,5 +1,5 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { Area } from '../../core/models/area';
+import { PostalAddress } from '../../core/models/postal-address';
 import { DataService } from '../../core/services/data.service';
 import {  Observable, of } from 'rxjs';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -12,14 +12,10 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class ByAddressComponent implements OnInit{
   private dataService = inject(DataService);
   private fb = inject(FormBuilder);
-  // Earlier versions, we used to inject using a constructor
-  // constructor(private dataService: DataService,
-  //   private fb: FormBuilder
-  // ) { }
 
   colsMetaData:Map<string,string> = new Map([
-    ['zipCode', 'Zip code'],
-    ['name', 'Name'],
+    ['postalCode', 'Zip code'],
+    ['street', 'Name'],
     ['city', 'City'],
     ['district', 'District'],
     ['state', 'State']
@@ -27,7 +23,7 @@ export class ByAddressComponent implements OnInit{
   
   cities: string[] = [];
   cityAreas$: Observable<string[]>;
-  data: Area[] = [];
+  data: PostalAddress[] = [];
   selectedCity: string;
   selectedArea: string = '';
   searchForm: FormGroup;

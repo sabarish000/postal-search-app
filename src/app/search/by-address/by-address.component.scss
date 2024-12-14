@@ -1,20 +1,126 @@
-.inputs-form {
+/***********************
+  General Layout
+***********************/
+.search-postal-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem;
+  }
+  
+  .search-card {
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #ffffff;
+  }
+  
+  .results-card {
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #ffffff;
+  }
+  
+  .title {
+    color: #007bff;
+    display: flex;
+    align-items: center;
+  }
+  
+  /***********************
+    Form Styles
+  ***********************/
+  .inputs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    my-searchable-dropdown {
+        width: 40%;
+    }
+
+    my-filterable-dropdown {
+        width: 40%;
+    }
+  }
+  
+  mat-form-field {
+    flex: 1;
+    min-width: 150px;
+  }
+  
+  .mat-form-field {
     width: 100%;
-    padding: 0 10px;
-    .inputs {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        justify-content: space-between;
-        my-searchable-dropdown {
-            min-width: 45%;
-        };
-        my-filterable-dropdown {
-            min-width: 45%;
-        }
+  }
+  
+  .submit-button{
+    display: flex;
+    justify-content: end;
+    button {
+        width: 20%;
+        padding: 0.75rem 0;
+        font-size: 1rem;
+        font-weight: bold;
+        border-radius: 50px;
+        transition: all 0.3s ease;
     }
-    .submit-button {
-        display: flex;
-        justify-content: end;
+  } 
+  
+  .submit-button button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /***********************
+    Results Table
+  ***********************/
+  mat-card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  .results-card {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 10px 15px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #007bff;
+    color: #ffffff;
+  }
+  
+  td {
+    border-bottom: 1px solid #f1f1f1;
+  }
+  
+  .row:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /***********************
+    Animations & Effects
+  ***********************/
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
     }
-}
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .submit-button button {
+    animation: fadeIn 0.8s ease-in-out;
+  }
+  

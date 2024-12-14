@@ -16,9 +16,9 @@ export class LoginService {
         const ADMIN = 'admin';
         const PWD = '1234';
         if(userName === ADMIN && password === PWD) {
-            this.loggedInUser$.set({username: 'Admin', isAdmin: true});
+            this.loggedInUser$.set({username: 'Admin', role: 'admin'});
         } else if(password === PWD){
-            this.loggedInUser$.set({username: userName, isAdmin: false});
+            this.loggedInUser$.set({username: userName, role: 'user'});
         } else {
             this.loggedInUser$.set(undefined);
         }

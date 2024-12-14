@@ -1,6 +1,6 @@
-export interface Area {
-    zipCode?: number;
-    name: string;
+export interface PostalAddress {
+    postalCode?: number;
+    street: string;
     number?: string;
     city: string;
     region?: string;

@@ -1,5 +1,5 @@
 export interface User {
   username: string;
   password?: string;
-  isAdmin: boolean;
+  role: 'user' | 'admin' | 'employee' | 'guest';
 }

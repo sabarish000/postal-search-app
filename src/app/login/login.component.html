@@ -1,31 +1,49 @@
-<div class="container">
-    <section style="display: inline-flex;">
-        <mat-card style="padding: 10px;">
-            <mat-card-title>Login</mat-card-title>
-            <mat-card-content>
-                <form [formGroup]="form" (ngSubmit)="submit()">
-                    <div>
-                        <mat-form-field>
-                            <input type="text" matInput placeholder="Username" formControlName="username">
-                        </mat-form-field>
-                    </div>
-
-                    <div>
-                        <mat-form-field>
-                            <input type="password" matInput placeholder="Password" formControlName="password">
-                        </mat-form-field>
-                    </div>
+<div class="login-container">
+    <section class="login-section">
+      <mat-card class="login-card shadow">
         
-                    <div class="submit-button">
-                        <button type="submit" mat-button>Login</button>
-                    </div>
-        
-                </form>
-            </mat-card-content>
-            <p *ngIf="error" class="error">
-                        {{ error }}
-                    </p>
-        </mat-card>
-        
+        <!-- Title -->
+        <mat-card-title class="text-center title">
+          Welcome Back! 🚀
+        </mat-card-title>
+  
+        <!-- Form -->
+        <mat-card-content>
+          <form [formGroup]="form" (ngSubmit)="submit()">
+            
+            <!-- Username Input -->
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Username</mat-label>
+              <input type="text" matInput placeholder="Enter your username" formControlName="username">
+              <mat-error *ngIf="form.controls['username'].invalid && form.controls['username'].touched">
+                Please enter a valid username.
+              </mat-error>
+            </mat-form-field>
+  
+            <!-- Password Input -->
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Password</mat-label>
+              <input type="password" matInput placeholder="Enter your password" formControlName="password">
+              <mat-error *ngIf="form.controls['password'].invalid && form.controls['password'].touched">
+                Please enter your password.
+              </mat-error>
+            </mat-form-field>
+  
+            <!-- Submit Button -->
+            <div class="submit-button text-center mt-4">
+              <button type="submit" mat-flat-button color="primary" [disabled]="form.invalid">
+                Login
+              </button>
+            </div>
+          </form>
+        </mat-card-content>
+  
+        <!-- Error Message -->
+        <p *ngIf="error" class="error-message">
+          {{ error }}
+        </p>
+  
+      </mat-card>
     </section>
-</div>
+  </div>
+  

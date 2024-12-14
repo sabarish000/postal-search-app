@@ -1,13 +1,107 @@
-.container {
+/***********************
+  General Styles
+***********************/
+.login-container {
+    height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
-    margin: 5em;
-    padding: 5px;
-    .submit-button {
-        display: flex;
-        align-items: center;
-        justify-content: right;
-        padding: 5px;
+    align-items: center;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+  }
+  
+  .login-section {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .login-card {
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 1rem;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .mt-4 {
+    margin-top: 1rem;
+  }
+  
+  /***********************
+    Input Fields
+  ***********************/
+  mat-form-field {
+    margin-bottom: 1.25rem;
+  }
+  
+  mat-label {
+    font-size: 1rem;
+    color: #007bff;
+  }
+  
+  input[matInput] {
+    font-size: 1rem;
+  }
+  
+  mat-form-field.mat-focused {
+    .mat-form-field-label {
+      color: #007bff !important;
     }
-}
+    .mat-form-field-outline {
+      border-color: #007bff !important;
+    }
+  }
+  
+  .mat-error {
+    font-size: 0.875rem;
+    color: #d32f2f !important;
+  }
+  
+  /***********************
+    Button Styles
+  ***********************/
+  button[mat-flat-button] {
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    padding: 0.75rem 2rem;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  button[mat-flat-button]:hover {
+    background-color: #0056b3 !important;
+  }
+  
+  button[mat-flat-button][disabled] {
+    background-color: #cccccc !important;
+    color: #666666 !important;
+  }
+  
+  button[mat-flat-button]:not([disabled]):hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /***********************
+    Error Message
+  ***********************/
+  .error-message {
+    color: #d32f2f;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+  

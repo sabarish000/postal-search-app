@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { Area } from '../../core/models/area';
+import { PostalAddress } from '../../core/models/postal-address';
 import { DataService } from '../../core/services/data.service';
 import { FormControl } from '@angular/forms';
 import { debounceTime } from 'rxjs';
@@ -13,10 +13,10 @@ export class ByPostalCodeComponent {
   dataService = inject(DataService);
 
   postcodeCtrl: FormControl= new FormControl('');
-  data: Area[] = []
+  data: PostalAddress[] = []
   colsMetaData:Map<string,string> = new Map([
-    ['zipCode', 'Zip code'],
-    ['name', 'Name'],
+    ['postalCode', 'Zip code'],
+    ['street', 'Name'],
     ['city', 'City'],
     ['district', 'District'],
     ['state', 'State']

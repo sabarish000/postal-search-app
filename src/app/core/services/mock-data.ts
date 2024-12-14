@@ -1,50 +1,50 @@
-import { Area } from '../models/area';
+import { PostalAddress } from '../models/postal-address';
 import { City } from '../models/city';
 
-export const areas: Area[] = [
+export const areas: PostalAddress[] = [
   {
-    zipCode: 10001,
-    name: 'Gothaer Str.',
+    postalCode: 10001,
+    street: 'Gothaer Str.',
     city: 'Berlin',
     district: 'Gesundbrunnen',
     state: 'Berlin',
     country: 'GERMANY',
   },
   {
-    zipCode: 10315,
-    name: 'Gotenstr',
+    postalCode: 10315,
+    street: 'Gotenstr',
     city: 'Berlin',
     district: 'KGA Bielefeld',
     state: 'Berlin',
     country: 'GERMANY',
   },
   {
-    zipCode: 10829,
-    name: 'Gotenstr1',
+    postalCode: 10829,
+    street: 'Gotenstr1',
     city: 'Berlin',
     district: 'Schöneberg',
     state: 'Berlin',
     country: 'GERMANY',
   },
   {
-    zipCode: 12524,
-    name: 'Gothaer Str11.',
+    postalCode: 12524,
+    street: 'Gothaer Str11.',
     city: 'Berlin',
     district: 'Altglienicke',
     state: 'Berlin',
     country: 'GERMANY',
   },
   {
-    zipCode: 13595,
-    name: 'Gotenstr12',
+    postalCode: 13595,
+    street: 'Gotenstr12',
     city: 'Berlin',
     district: 'Wilhelmstadt',
     state: 'Berlin',
     country: 'GERMANY',
   },
   {
-    zipCode: 14050,
-    name: 'Gotha-Allee',
+    postalCode: 14050,
+    street: 'Gotha-Allee',
     number: '1 - 15 (ungerade)',
     city: 'Berlin',
     district: 'Westend',

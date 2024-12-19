@@ -46,7 +46,7 @@ export class ByAddressComponent implements OnInit{
   }
 
   submit() {
-    this.dataService.getAreasByName(this.searchForm.get('city')?.value, this.searchForm.get('area')?.value)
+    this.dataService.getAddresesByName(this.searchForm.get('city')?.value, this.searchForm.get('area')?.value)
     .subscribe(resp =>{
       console.log("Data", resp);
       this.data = resp;

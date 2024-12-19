@@ -22,7 +22,12 @@ export class LoginComponent {
 
   submit() {
     if (this.form.valid) {
-      this.loginService.login(this.form.get('username')?.value, this.form.get('password')?.value);
+      this.loginService
+        .login(
+          this.form.get('username')?.value,
+          this.form.get('password')?.value
+        )
+        .subscribe();
     }
     if(this.loginService.loggedInUser$()) {
       this.error = '';

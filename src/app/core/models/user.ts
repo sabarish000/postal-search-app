@@ -1,5 +1,13 @@
 export interface User {
   username: string;
   password?: string;
-  role: 'user' | 'admin' | 'employee' | 'guest';
+  token: string | undefined;
+  role: UserRole;
+}
+
+export enum UserRole {
+  User = 'user',
+  Admin = 'admin',
+  Employee = 'employee',
+  Guest = 'guest',
 }

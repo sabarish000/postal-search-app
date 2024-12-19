@@ -25,7 +25,7 @@ export class ByPostalCodeComponent {
     this.postcodeCtrl?.valueChanges.pipe(
       debounceTime(300)
     ).subscribe( val => {
-      this.dataService.getAreasByCode(val).subscribe(resp =>{
+      this.dataService.getAddressesByPostcode(val).subscribe(resp =>{
         this.data = resp;
       })
     });
